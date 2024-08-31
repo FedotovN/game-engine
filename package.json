@@ -1,8 +1,8 @@
 {
   "name": "kneekeetah-game-engine",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Separated package with a bunch of handful tools to create little games using Canvas API",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "exports": {
     ".": "./dist/index.js",
     "./components": "./dist/components",
