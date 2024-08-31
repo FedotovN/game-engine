@@ -1,6 +1,6 @@
 {
   "name": "kneekeetah-game-engine",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Separated package with a bunch of handful tools to create little games using Canvas API",
   "main": "./dist/index.js",
   "exports": {
@@ -12,7 +12,7 @@
   },
   "files": ["dist"],
   "scripts": {
-    "build": "webpack --mode=production --node-env=production",
+    "build": "webpack --mode=production --node-env=production | tsc --declaration --emitDeclarationOnly",
     "watch": "webpack --watch",
     "serve": "webpack serve"
   },

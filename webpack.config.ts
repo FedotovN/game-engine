@@ -3,6 +3,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const isProduction = process.env.NODE_ENV == 'production';
 
+function getWebpackPlugins() {
+    if (isProduction) return [];
+    return [
+        new HtmlWebpackPlugin({
+            template: 'public/index.html',
+        }),
+    ]
+}
 
 const config = {
     entry: {
@@ -34,11 +42,7 @@ const config = {
         open: true,
         host: 'localhost',
     },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: 'public/index.html',
-        }),
-    ],
+    plugins: getWebpackPlugins(),
     module: {
         rules: [
             {
