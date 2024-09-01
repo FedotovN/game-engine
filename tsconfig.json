@@ -2,14 +2,24 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": true,
-    "module": "NodeNext",
+    "module": "ESNext",
     "target": "ES6",
     "allowJs": true,
-    "moduleResolution": "NodeNext",
-    "outDir": "dist",
+    "moduleResolution": "Bundler",
+    "baseUrl": ".",
+    "declaration": true,
+    "declarationDir": "./dist/types",
+    "outDir": "./dist/types",
+    "types": ["sat"],
     "paths": {
       "@/*": ["./src/*"],
-    }
+    },
+    "plugins": [
+      {
+        "transform": "typescript-transform-paths",
+        "afterDeclarations": true
+      }
+    ]
   },
-  "files": ["src/index.ts"],
+  "include": ["./src/**/*"]
 }

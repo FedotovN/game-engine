@@ -1,38 +1,37 @@
 {
   "name": "kneekeetah-game-engine",
-  "version": "2.0.3",
+  "version": "2.1.0",
   "description": "Separated package with a bunch of handful tools to create little games using Canvas API",
-  "main": "./dist/index.js",
-  "exports": {
-    ".": "./dist/index.js",
-    "./components": "./dist/components",
-    "./models": "./dist/models",
-    "./services": "./dist/services",
-    "./shared": "./dist/shared"
-  },
-  "files": ["dist"],
+  "main": "./dist/bundle.esm.js",
+  "types": "./dist/types/index.d.ts",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "webpack --mode=production --node-env=production | tsc --declaration --emitDeclarationOnly",
-    "watch": "webpack --watch",
-    "serve": "webpack serve"
+    "build": "rollup -c | tsc-alias"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "peerDependencies": {
     "sat": "^0.9.0"
   },
   "devDependencies": {
+    "@rollup/plugin-alias": "^5.1.0",
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
     "@types/node": "^22.5.1",
     "@types/sat": "^0.0.35",
-    "@types/webpack": "^5.28.5",
-    "@webpack-cli/generators": "^3.0.7",
-    "html-webpack-plugin": "^5.6.0",
-    "ts-loader": "^9.5.1",
-    "ts-node": "^10.9.2",
+    "rollup": "^4.21.2",
+    "rollup-plugin-tsconfig-paths": "^1.5.2",
+    "rollup-plugin-typescript-paths": "^1.5.0",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "sat": "^0.9.0",
+    "tsc-alias": "^1.8.10",
+    "ttypescript": "^1.5.15",
     "typescript": "^5.5.4",
-    "webpack": "^5.94.0",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.0.4"
+    "typescript-transform-paths": "^3.5.0"
   }
 }

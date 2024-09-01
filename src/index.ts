@@ -1,3 +1,4 @@
+import EngineManager from "@/EngineManager";
 import { clamp, lerp, sleep, degreesToRad, minRandom, negativeRandom } from "@/utils";
 import {
     Rigidbody, Vector, Camera,
@@ -14,7 +15,6 @@ import {
     RenderService,
     TickService
 } from "@/services";
-import EngineManager from "@/EngineManager";
 
 export default EngineManager;
 export {
@@ -37,4 +37,3 @@ export {
 export {
     clamp, lerp, sleep, degreesToRad, minRandom, negativeRandom,
 }
-

@@ -1,7 +1,7 @@
-import GameObjectsService from "./services/GameObjectsService";
-import TickService from "./services/TickService";
-import PhysicsService from "./services/PhysicsService";
-import RenderService from "./services/RenderService";
+import GameObjectsService from "@/services/GameObjectsService.js";
+import TickService from "@/services/TickService";
+import PhysicsService from "@/services/PhysicsService";
+import RenderService from "@/services/RenderService";
 
 export default class EngineManager {
 

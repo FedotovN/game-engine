@@ -1,4 +1,4 @@
-import GameObjectsService from "./GameObjectsService";
+import GameObjectsService from "@/services/GameObjectsService.js";
 import Rigidbody from "@/models/components/Rigidbody";
 import Collider from "@/models/components/Collider";
 
