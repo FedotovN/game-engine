@@ -1,5 +1,5 @@
 import { Camera } from "@/models";
-import { DrawableEntity } from "@/models";
+import {DrawableEntity} from "@/models/shared";
 
 class RenderService {
     drawables: Set<DrawableEntity> = new Set();

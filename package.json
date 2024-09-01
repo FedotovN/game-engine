@@ -1,15 +1,22 @@
 {
   "name": "kneekeetah-game-engine",
-  "version": "2.1.0",
-  "description": "Separated package with a bunch of handful tools to create little games using Canvas API",
+  "version": "2.1.11",
+  "description": "Separated package with a bunch of useful tools to create little games using Canvas API",
   "main": "./dist/bundle.esm.js",
-  "types": "./dist/types/index.d.ts",
+  "types": "./dist/index.d.ts",
   "type": "module",
-  "files": [
-    "dist"
-  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js",
+      "types": "./dist/types/index.d.ts",
+      "default": "./dist/index.esm.js"
+    }
+  },
+  "files": ["dist"],
   "scripts": {
-    "build": "rollup -c | tsc-alias"
+    "build": "rollup -c --configPlugin typescript",
+    "prepublishOnly": "tsc-alias"
   },
   "keywords": [],
   "author": "",
